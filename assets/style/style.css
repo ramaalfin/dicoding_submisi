@@ -12,6 +12,9 @@ a{
 main{
     background-color: #fcfefe;
 }
+.wrapper {
+    position: relative;
+}
 section{
     padding: 100px;
 }
@@ -73,8 +76,6 @@ nav.sticky .logo{
     color: #111;
 }
 
-
-
 .home{
     padding: 60px 180px;
 }
@@ -85,7 +86,7 @@ nav.sticky .logo{
     margin-bottom: 80px;
 }
 .home .content{
-    max-width: 40%;
+    max-width: 50%;
 }
 .home .title{
     font-size: 36px;
@@ -93,7 +94,7 @@ nav.sticky .logo{
     text-transform: capitalize;
 }
 .home .title span{
-    color: #4D77FF;
+    color: #0AA1DD;
 }
 .home .sub-title{
     margin: 10px 0px 40px;
@@ -119,7 +120,7 @@ nav.sticky .logo{
 .way .content{
     display: flex;
     margin-top: 2em;
-    justify-content: center;
+    align-items: baseline;
 }
 .way .content article{
     text-align: center;
@@ -168,7 +169,7 @@ nav.sticky .logo{
 
 .services article .masang .title,
 .services article .ngirim .title{
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     text-transform: uppercase;
     color: #4D77FF;
     font-weight: 600;
@@ -187,7 +188,7 @@ nav.sticky .logo{
     font-weight: 400;
     color: #5B5575;
     line-height: 30px;
-    margin-top: 30px
+    margin-top: 15px
 }
 .services article .masang .image img{
     border-radius: 0px 60px 60px 0px;
@@ -196,24 +197,40 @@ nav.sticky .logo{
     border-radius: 60px 0px 0px 60px;
 }
 
-
-.bio{
-    margin-bottom: 50px;
+.fixed-sidebar{
+    position: fixed;
+    top: 600px;
+    width: 250px;
+    right: 0;
 }
-.bio .title .titleText{
-    text-align: center;
-    font-size: 28px;
-    font-weight: 500;
-    color: #0AA1DD;
+.sticky{
+    position: fixed;
+    top: 100px; 
+    transition: .7s;
 }
 .bioData{
-    margin: auto;
-    padding: 50px;
+    padding: 20px;
     background: #fff;
     box-shadow: 0 15px 50px rgba(0,0,0,0.1);
-    max-width: 350px;
-    margin-top: 40px;
-    text-align: center;
+    max-width: 240px;
+}
+.bioData .title{
+    font-size: 16px;
+    color: #242F9B;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+}
+.bioData ul{
+    list-style: none;
+}
+.bioData ul li{
+    margin-bottom: .3rem;
+    display: flex;
+    align-items: center;
+}
+.bioData ul li a{
+    margin-left: .5rem;
 }
 
 .bioImg{
@@ -226,16 +243,6 @@ nav.sticky .logo{
     justify-self: center;
     object-fit: cover;
 }
-.bioData .bioName{
-    font-weight: normal;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-.bioData .bioProfesi{
-    font-weight: normal;
-    color: #6b5f5e;
-}
-
 
 footer{
     padding: 20px 0px;
@@ -263,7 +270,7 @@ footer article ul li{
 }
 footer .cta .text{
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     text-transform: capitalize;
     color: #242F9B;

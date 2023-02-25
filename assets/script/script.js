@@ -1,4 +1,10 @@
-window.addEventListener('scroll', function(){
-  const nav = document.querySelector('nav');
-  nav.classList.toggle("sticky", window.scrollY > 0);
+const sidebar = document.querySelector('.fixed-sidebar');
+const home = document.querySelector('.home');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= home.offsetHeight) {
+    sidebar.classList.add('sticky');
+  } else {
+    sidebar.classList.remove('sticky');
+  }
 });
